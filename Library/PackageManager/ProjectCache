@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638149940450000000
+      ticks: 638150810820000000
     m_Hash: 1223211664
   m_LockFileStatus:
     m_FilePath: /Users/dgsw8th19/Documents/GitHub/test/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638149940450000000
+      ticks: 638150810820000000
     m_Hash: 609109264
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
