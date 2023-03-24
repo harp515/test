@@ -10,6 +10,12 @@ public class Player1 : MonoBehaviour
     public bool isTouchRight;
     public bool isTouchBottom;
 
+    Animator anim;
+    void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
+    
     void Update()
     {
         float h = Input.GetAxisRaw("Horizontal");
@@ -22,6 +28,12 @@ public class Player1 : MonoBehaviour
         Vector3 nextPos = new Vector3(h, v, 0) * speed * Time.deltaTime;
 
         transform.position = curPos + nextPos;
+
+
+        if(Input.GetButtonDown("Horizontal") ||
+           Input.GetButtonUp("Horizontal")) {
+            anim.SetInteger("Input", (int)h);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
