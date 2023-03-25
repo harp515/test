@@ -345,7 +345,8 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/Sript/Player1.cs"
+"Assets/Script/Bullet.cs"
+"Assets/Script/Player1.cs"
 "Assets/Vertical 2D Shooting BE4/ReadMe/Scripts/ReadmeBE4.cs"
 -langversion:9.0
 
