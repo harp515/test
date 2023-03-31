@@ -124,6 +124,7 @@ public class Player1 : MonoBehaviour
             }
         }
         else if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "EnemyBullet") {
+            Debug.Log("뒤짐");
             manager.RespawnPlayer();
             gameObject.SetActive(false);
         }
