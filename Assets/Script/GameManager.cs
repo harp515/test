@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class GameManager : MonoBehaviour
     public float curSpawnDelay;
 
     public GameObject player;
+    public Text scoreText;
 
     private void Update()
     {
@@ -21,6 +23,9 @@ public class GameManager : MonoBehaviour
             maxSpawnDelay = Random.Range(0.5f, 3f);
             curSpawnDelay = 0;
         }
+
+        Player1 playerLogic = player.GetComponent<Player1>();
+        scoreText.text =string.Format("{0:n0}", playerLogic.score);
     }
     void SpawnEnemy()
     {

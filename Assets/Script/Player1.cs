@@ -4,20 +4,27 @@ using UnityEngine;
 
 public class Player1 : MonoBehaviour
 {
+    public int score;
+    
+    //벽 변수
     public bool isTouchTop;
     public bool isTouchLeft;
     public bool isTouchRight; 
     public bool isTouchBottom;
 
+    //탄환 변수
     public float speed;
     public float power;
     public float maxShotDelay;
     public float curShotDelay;
 
+    //탄환 종류
     public GameObject bulletObjA;
     public GameObject bulletObjB;
 
+    //게임메뉴
     public GameManager manager;
+
 
     Animator anim;
 
@@ -35,7 +42,9 @@ public class Player1 : MonoBehaviour
 
     void Move()
     {
+        //좌, 우 방향키가 눌린 것을 감지
         float h = Input.GetAxisRaw("Horizontal");
+        //왼쪽 또는 오른쪽에 벽이 있을때 속도를 
         if((isTouchRight && h==1) || (isTouchLeft && h==-1))
             h = 0;
         float v = Input.GetAxisRaw("Vertical");
@@ -124,7 +133,6 @@ public class Player1 : MonoBehaviour
             }
         }
         else if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "EnemyBullet") {
-            Debug.Log("뒤짐");
             manager.RespawnPlayer();
             gameObject.SetActive(false);
         }

@@ -138,6 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: S
   speed: 2
+  enemyScore: 1
   health: 3
   sprites:
   - {fileID: 8414478535512612329, guid: 138040323294fd440a3a823e5d70ad01, type: 3}
@@ -147,3 +148,4 @@ MonoBehaviour:
   bulletObjA: {fileID: 1225994096973359587, guid: aa950a07b92664a03a572ffc9ec1b0ee, type: 3}
   bulletObjB: {fileID: 1225994096973359587, guid: 45bf0f18c0d124726b0c93c10856c6e0, type: 3}
   player: {fileID: 0}
+  score: 0

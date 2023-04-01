@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public string enemyName;
     public float speed;
+    public int enemyScore;
     public int health;
     public Sprite[] sprites;
 
@@ -16,30 +17,35 @@ public class Enemy : MonoBehaviour
     public GameObject bulletObjB;
     public GameObject player;
 
+    public int score;
+
     SpriteRenderer spriteRenderer;
 
-    void Awake() {
+    public void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    void Update()
+    public void Update()
     {
+
         Fire();
         Reload();
     }
 
-    void OnHit(int dmg)
+    public void OnHit(int dmg)
     {
         health -= dmg;
         spriteRenderer.sprite = sprites[1];
         Invoke("ReturnSprite", 0.1f);
 
         if(health <= 0) {
+            Player1 playerLogic = player.GetComponent<Player1>();
+            playerLogic.score += enemyScore;
             Destroy(gameObject);
         }
     }
 
-    void Fire()
+    public void Fire()
     {
         if (curShotDelay < maxShotDelay)
             return;
@@ -66,17 +72,17 @@ public class Enemy : MonoBehaviour
         curShotDelay = 0;
     }
 
-    void Reload()
+    public void Reload()
     {
         curShotDelay += Time.deltaTime;
     }
 
-    void ReturnSprite()
+    public void ReturnSprite()
     {
         spriteRenderer.sprite = sprites[0];
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "BorberBullet") {
             Destroy(gameObject);

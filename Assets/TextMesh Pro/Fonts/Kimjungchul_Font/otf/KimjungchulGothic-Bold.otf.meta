@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 4a6988bd2899a40e4ad25c1c7c080e79
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Kim jung chul Gothic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 277c1d35e49094144adce5dc1d75aa38, type: 3}
+  - {fileID: 12800000, guid: 123b81b6d3f8d4c7595ab484ed8c9514, type: 3}
+  - {fileID: 12800000, guid: c388c004795454c3088edb1053899301, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
