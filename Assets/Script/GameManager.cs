@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
         }
 
         Player1 playerLogic = player.GetComponent<Player1>();
-        scoreText.text =string.Format("{0:n0}", playerLogic.score);
+        scoreText.text =string.Format("Score: " + "{0:n0}", playerLogic.score);
     }
     void SpawnEnemy()
     {
